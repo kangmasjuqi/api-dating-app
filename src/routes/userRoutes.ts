@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { UserController } from '../controllers/userController';
 import { authenticate } from '../middlewares/auth';
-import { validateSignup, validateLogin, validateSwipe } from '../middlewares/validator';
+import { validateSignup, validateLogin, validateSwipe, validatePackagePurchase } from '../middlewares/validator';
 
 const router = Router();
 const userController = new UserController();
@@ -21,6 +21,15 @@ router.post(
   authenticate,
   validateSwipe,
   userController.swipe.bind(userController)
+);
+
+// New premium package routes
+router.get('/packages', (req, res) => userController.getPremiumPackages(req, res));
+router.post(
+    '/packages/:packageId/purchase', 
+    authenticate, 
+    validatePackagePurchase, 
+    (req, res) => userController.purchasePackage(req, res)
 );
 
 export default router;

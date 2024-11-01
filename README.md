@@ -72,6 +72,14 @@ The Basic Functionalities of the Dating App would be:
     -H "Content-Type: application/json" \
     -d '{"action":"like"}'
 
+### 5. List all available premium packages
+
+    curl -X GET 'http://localhost:3001/api/packages' -H 'Content-Type: application/json'
+
+### 6. Purchase a premium package (requires authentication)
+
+    curl -X POST "http://localhost:3001/api/packages/1/purchase" -H "Content-Type: application/json" -H "Authorization: Bearer YOUR_AUTH_TOKEN"
+
 ## Deployment Steps
 
 ### 1. Environment Setup
