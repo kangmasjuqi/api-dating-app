@@ -40,11 +40,19 @@ The Basic Functionalities of the Dating App would be:
 
 ## Setup & Run the service
 
-    npm install
+    - create MySQL DB
 
-    configure db connection -> `src/config/database.ts`
+    - import the data starter file `API-api_dating_app-starter.sql` to the DB
 
-    npm run dev
+    - configure db connection -> `src/config/database.ts`
+
+    - install dependencies
+
+        npm install
+
+    - run the app
+
+        npm run dev
 
 ## API usage samples
 
