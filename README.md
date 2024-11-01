@@ -23,12 +23,10 @@ The Basic Functionalities of the Dating App would be:
     │   └── database.ts          # Database configuration for connecting to MySQL
     ├── controllers              # Defines controllers handling API request logic
     ├── middleware               # Middleware for authentication and request handling
-    ├── models                   # Models representing database entities
     ├── routes                   # Route definitions for each API endpoint
     ├── services
-    │   └── UserService.ts       # Core business logic for user actions (signup, login, swipe)
+    │   └── userService.ts       # Core business logic for user actions (signup, login, swipe)
     ├── types                    # TypeScript type definitions for data structures
-    └── utils                    # Utility functions (e.g., JWT generation)
 
 ### Key Files
 
