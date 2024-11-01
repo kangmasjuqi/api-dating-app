@@ -48,4 +48,26 @@ export class UserController {
       res.status(400).json({ message: (error as Error).message });
     }
   }
+
+  async getPremiumPackages(req: Request, res: Response) {
+      try {
+          const packages = await this.userService.getPremiumPackages();
+          res.json(packages);
+      } catch (error) {
+          res.status(400).json({ message: (error as Error).message });
+      }
+  }
+
+  async purchasePackage(req: AuthRequest, res: Response) {
+      try {
+          const packageId = parseInt(req.params.packageId);
+          const purchase = await this.userService.purchasePackage(
+              req.user!.id, 
+              packageId
+          );
+          res.json(purchase);
+      } catch (error) {
+          res.status(400).json({ message: (error as Error).message });
+      }
+  }
 }

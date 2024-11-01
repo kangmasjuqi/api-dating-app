@@ -59,3 +59,16 @@ export const validateSwipe = (req: Request, res: Response, next: NextFunction) =
 
   next();
 };
+
+export const validatePackagePurchase = (req: Request, res: Response, next: NextFunction) => {
+  const packageId = parseInt(req.params.packageId);
+  
+  if (!packageId || isNaN(packageId)) {
+      return res.status(400).json({
+          status: 'error',
+          message: 'Invalid package ID'
+      });
+  }
+
+  next();
+};

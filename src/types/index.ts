@@ -28,3 +28,24 @@ export interface SignupData {
     gender: 'Male' | 'Female' | 'Other';
     label?: string;  // Optional label field
 }
+
+export interface PremiumPackage {
+    id: number;
+    name: string;
+    description?: string;
+    price: number;
+    benefits: string[];
+    created_at: Date;
+    updated_at: Date;
+}
+
+export interface UserPremiumPackage {
+    id: number;
+    user_id: number;
+    package_id: number;
+    purchased_at: Date;
+    expires_at: Date;
+}
+export interface ExtendedUser extends User {
+    premium_packages?: UserPremiumPackage[];
+}
