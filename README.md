@@ -14,19 +14,6 @@ The Basic Functionalities of the Dating App would be:
 
   - Verified label for user
 
-## Basic Functionalities
-
-    -  Sign up & Login: Users can create an account and log in to access the app.
-
-    -  Daily Swipe Limit: Users are limited to 10 profile swipes (like or pass) per day. Profiles that a
-    user interacts with won’t reappear within the same day.
-
-    -  Premium Packages: Users can purchase upgrades, including:
-
-        - Unlimited daily swipes
-
-        - Verified profile label
-
 ## Project Structure
 
 ### The service is organized as follows
@@ -45,13 +32,13 @@ The Basic Functionalities of the Dating App would be:
 
 ### Key Files
 
-    database.ts: Configures MySQL database connection details.
+`database.ts`: Configures MySQL database connection details.
 
-    UserService.ts: Implements core logic for managing user accounts, login sessions, and swiping interactions.
+`UserService.ts`: Implements core logic for managing user accounts, login sessions, and swiping interactions.
 
-    routes: Maps URLs to the appropriate controllers and functions for handling requests.
+`routes`: Maps URLs to the appropriate controllers and functions for handling requests.
 
-    controllers: Processes requests, calls service methods, and sends responses.
+`controllers`: Processes requests, calls service methods, and sends responses.
 
 ## Setup & Run the service
 
@@ -91,7 +78,7 @@ The Basic Functionalities of the Dating App would be:
 
 ### 1. Environment Setup
 
-    Environment Variables: Ensure all sensitive data, such as database credentials and JWT secrets, are stored in environment variables. You can use a .env file for local development, but avoid committing it to version control.
+Environment Variables: Ensure all sensitive data, such as database credentials and JWT secrets, are stored in environment variables. You can use a .env file for local development, but avoid committing it to version control.
 
 ### 2. Build for Production
 

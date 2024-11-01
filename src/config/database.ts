@@ -3,7 +3,7 @@ import mysql from 'mysql2/promise';
 const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
-  password: '__password__',
+  password: 'Marjuqi2024$',
   database: 'api_dating_app',
   waitForConnections: true,
   connectionLimit: 10,
